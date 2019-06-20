@@ -14,13 +14,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    var emojis = ["🌞": "Sunny & Happy!", "🌚": "Moony & Gloomy."]
+    
     @IBAction func showMessage(sender:
         UIButton) {
-        let alertController = UIAlertController(title: "In a SUNNY mood ☼", message: "We all want to be happy, right?", preferredStyle: UIAlertController.Style.alert)
+        let selesctedSunEmoji = sender.titleLabel?.text
         
+        let alertController = UIAlertController(title: "In a SUNNY mood ☼", message: "We all want to be happy, right?", preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:
         nil))
         
+            print(emojis["🌞"])
+        
         present(alertController, animated: true, completion: nil)
     }
+    
+    
 }
