@@ -30,5 +30,6 @@ class ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    let customMessages = ["Sunny & Happy!": ["]]
     
 }
